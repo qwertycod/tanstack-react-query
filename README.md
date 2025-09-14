@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+Todo app showing how react tanstack query works
+source to learn - https://www.youtube.com/watch?v=mPaCnwpFvZY&t=295s
++ GPT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates how to use React Query v5 (@tanstack/react-query) with Suspense, Error Boundaries, and mutations.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+Fetch (GET) data using useSuspenseQuery
 
-### `npm start`
+Handles loading with <Suspense fallback={...}>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Handles errors with <ErrorBoundary>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Create (POST) data using useMutation
 
-### `npm test`
+Submits a new Todo item
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Displays the created id from the server response
 
-### `npm run build`
+Query Invalidation support (via refetch)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Example API: JSONPlaceholder
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React 18+
 
-### `npm run eject`
+@tanstack/react-query v5
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+JSONPlaceholder (fake REST API)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
+✅ What You Learn
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+How to fetch data with useSuspenseQuery
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+How to handle loading with Suspense
 
-## Learn More
+How to handle errors with ErrorBoundary
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+How to create data with useMutation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+How to access mutation results (e.g., created id)
+---
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+We can have to main methods one for quering and one for mutation.
 
-### Analyzing the Bundle Size
+Benfits - It provide props like loading, fetching, data, error so we dont have to write login for it.   
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Get success showing json data
+![alt text](image-2.png)
 
-### Making a Progressive Web App
+Post success
+![alt text](image-1.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Post error
+![alt text](image.png)
